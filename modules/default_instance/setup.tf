@@ -1,6 +1,7 @@
 #Object default class
 
 resource ibm_resource_instance service {
+  count             = var.use_data ? 0 : 1
   name              = var.name
   service           = var.service
   plan              = var.plan
@@ -19,6 +20,7 @@ resource ibm_resource_instance service {
 #get datasource of the created instance
 
 data ibm_resource_instance service {
+  count             = var.use_data ? 1 : 0
   name              = var.name
   resource_group_id = var.resource_group_id 
   service           = var.service
