@@ -23,7 +23,7 @@ data ibm_resource_instance service {
   resource_group_id = var.resource_group_id 
   service           = var.service
 }
-
+/*
 #creat local variable
 locals {
   service_id = (
@@ -38,5 +38,5 @@ locals {
 output id {
   value       = local.service_id
 }
-
+*/
 
